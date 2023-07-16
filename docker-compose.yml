@@ -3,7 +3,7 @@ services:
     build: .
     container_name: nostream
     environment:
-      SECRET: ${SECRET}
+      SECRET: tempsecret
       RELAY_PORT: 8008
       # Master
       NOSTR_CONFIG_DIR: /home/node/.nostr
@@ -71,7 +71,7 @@ services:
       nostream-db:
         condition: service_healthy
       nostream-migrate:
-        condition: service_completed_successfully
+        condition: service_started
     restart: on-failure
     networks:
       default:
