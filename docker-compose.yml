@@ -64,7 +64,7 @@ services:
     volumes:
       - ${PWD}/.nostr:/home/node/.nostr
     ports:
-      - 127.0.0.1:8008:8008
+      - 0.0.0.0:8008:8008
     depends_on:
       nostream-cache:
         condition: service_healthy
