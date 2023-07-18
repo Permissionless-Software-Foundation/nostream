@@ -30,3 +30,7 @@ RUN npm install --omit=dev --quiet
 USER node:node
 
 CMD ["node", "src/index.js"]
+
+# Used for debugging
+#COPY dummy-app.js dummy-app.js
+#CMD ["node", "dummy-app.js"]
